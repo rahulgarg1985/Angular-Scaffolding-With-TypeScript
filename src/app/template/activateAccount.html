@@ -1,0 +1,26 @@
+<div>
+    <h2 style="text-align:center;margin-bottom:20px;">Activate Account</h2>
+    <form ng-submit="vm.confirmUserEmailAndSetPassword()" role="form" name="myForm" novalidate>
+         <div class="form-group">
+            <label>Password should be atleast 8 character long and should contain lower case, upper case and a digit.</label>
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" name="pwd" class="form-control" ng-model="vm.password" placeholder="Password" 
+             minlength="8" required>
+            <span style="color:red" ng-show="myForm.pwd.$invalid">
+            <span ng-show="myForm.pwd.$error.required">Password is required.</span>
+             <span ng-show="myForm.pwd.$error.minlength">Minimum length is eight character..</span>
+        </div>
+        <div class="form-group">
+            <label>Confirm Password</label><br/>
+            <input type="password" class="form-control" name="confirmPassword" ng-model="vm.confirmPassword" compare-to="vm.password" required />
+            <span style="color:red" ng-show="myForm.confirmPassword.$invalid">
+            <span ng-show="myForm.confirmPassword.$error.required">Confirm Password required.</span><br/>
+              <span ng-show="myForm.confirmPassword.$error">Password mismatch.</span>
+            </span>
+        </div>
+        <button type="submit" ng-disabled="myForm.$invalid" class="btn btn-success">Activate</button>
+         <button type="button" class="btn btn-success" ng-click="vm.goToLogin()">Back</button>
+    </form>
+</div>

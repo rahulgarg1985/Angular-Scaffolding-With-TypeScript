@@ -1,0 +1,11 @@
+GO to root folder of Scaffolding and run commands in below sequence :
+
+-- install tsd, bower and gulp at global level
+npm install  tsd bower gulp -g
+
+-- install required modules for the app and build the system 
+npm install
+bower install
+tsd update
+tsd rebundle
+gulp

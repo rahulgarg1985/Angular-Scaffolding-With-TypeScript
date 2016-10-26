@@ -1,0 +1,16 @@
+﻿<table class="table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Address</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="user in vm.users">
+            <td>{{user.name}}</td>
+            <td>{{user.age}}</td>
+            <td>{{user.address}}</td>
+        </tr>
+    </tbody>
+</table>

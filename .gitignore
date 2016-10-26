@@ -9,6 +9,8 @@ performance/temp*.html
 angular.js.tmproj
 /node_modules/
 bower_components/
+typings/
+build/
 angular.xcodeproj
 .idea
 *.iml
