@@ -1,27 +1,96 @@
-﻿<!DOCTYPE html>
-<html class="no-js" lang="">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<title>AngularApp@TS</title>
-		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-		<link rel="shortcut icon" href="favicon.ico" />
-		<!-- inject:lib:css -->
-		<!-- endinject -->
-		<!-- inject:app:css -->
-		<!-- endinject -->
-	</head>
-	<body ng-app="app" style="margin:50px;">
-		<toaster-container></toaster-container>
-		<div ng-view></div>
-	</body>
-	
-	<!-- inject:lib:js -->
-	<!-- endinject -->
-	<!-- inject:app:js -->
-	<!-- endinject -->
-	<!-- inject:module:js -->
-	<!-- endinject -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Angular-scaffolding-with-typescript by rahulgarg1985</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Angular-scaffolding-with-typescript</h1>
+        <h2></h2>
+        <a href="https://github.com/rahulgarg1985/Angular-Scaffolding-With-TypeScript" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h3>
+<a id="overview" class="anchor" href="#overview" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Overview</h3>
+
+<p>This repository contains an extensible scaffolding of angular with typescript. It has gulp based build and run configuration for dev and prod environment. It has following main components.</p>
+
+<ul>
+<li>
+<strong>bower.josn</strong> : It contains all required javascript libraries for application.</li>
+<li>
+<strong>package.json</strong> : It contains all required node packages for building and running the app.</li>
+<li>
+<strong>tsd.json</strong> : There is a github repo, which hosts typescript definitions for a lot of javascript libraries. We can put informations of all required definitions in this file and they will be added to app. It is needed because we are writing our code in TypeScript.</li>
+<li>
+<strong>gulpfile.json</strong>: This is gulp based configuration. It do all required stuff regaridng building and running the app.</li>
+<li>
+<strong>config</strong> : This folder contains two files.
+           1. dev.js : This contains all external files (js and css) for dev environment.
+           2. prod.js : This contains all external files required for prod environment. Usually, we have location of minified files.</li>
+<li>
+<strong>src</strong> : This folder have all application specific code in TypeScript. I divided this into two sub folder :
+
+<ul>
+<li>
+<strong>app</strong> : This folder contains app specific items, such as controllers, templates , directive, routes etc.  Folder contains some basic code templates so that it would be work as reference.</li>
+<li>
+<strong>core</strong> : I tried to abstract out some part of code, which would be quite similar for same flavour of applications, so that we can re use the same code base for different apps. For e.g.: Authorization,routing, storage, network calls, app level events, event-bus  etc.<br>
+</li>
+</ul>
+</li>
+</ul>
+
+<h3>
+<a id="how-to-run" class="anchor" href="#how-to-run" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to run</h3>
+
+<p>Go to root folder of Scaffolding  and run below commands in order to install all required components and run.</p>
+
+<ul>
+<li>npm install  tsd bower gulp -g</li>
+<li>npm install</li>
+<li>bower install</li>
+<li>tsd update</li>
+<li>tsd rebundle</li>
+<li>gulp</li>
+</ul>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/rahulgarg1985/Angular-Scaffolding-With-TypeScript/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/rahulgarg1985/Angular-Scaffolding-With-TypeScript/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/rahulgarg1985/Angular-Scaffolding-With-TypeScript"></a> is maintained by <a href="https://github.com/rahulgarg1985">rahulgarg1985</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
 </html>
